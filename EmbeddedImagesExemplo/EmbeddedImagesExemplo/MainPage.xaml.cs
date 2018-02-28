@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmbeddedImagesExemplo.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ namespace EmbeddedImagesExemplo
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+
+            this.BindingContext = new MainViewModel();
+            //var Imagem = ImageSource.FromResource("EmbeddedImagesExemplo.Resources.Polly.jpg");
+        }
 	}
 }

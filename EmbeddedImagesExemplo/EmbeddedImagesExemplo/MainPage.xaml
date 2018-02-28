@@ -2,10 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:EmbeddedImagesExemplo"
-             x:Class="EmbeddedImagesExemplo.MainPage">
+             x:Class="EmbeddedImagesExemplo.MainPage" Padding="0,20,0,0"
+            xmlns:controle="clr-namespace:EmbeddedImagesExemplo.Controls;assembly=EmbeddedImagesExemplo">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout>
+        <Label Text="Exibindo imagem no XAML:"  />
+
+        <!-- Nosso controle novo -->
+        <Image Source="{controle:ImageResource EmbeddedImagesExemplo.Resources.Polly.jpg}" />
+
+        <Label Text="Exibindo imagem da ViewModel:"  />
+
+        <Image Source="{Binding Image}" />
+
+    </StackLayout>
 
 </ContentPage>
